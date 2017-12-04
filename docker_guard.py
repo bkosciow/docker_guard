@@ -16,7 +16,7 @@ def decode(e):
 
 def validate_ports(container):
 	for port in BANNED_PORTS:
-		if container.attrs['NetworkSettings'] id not None and
+		if container.attrs['NetworkSettings'] is not None and
 		 container.attrs['NetworkSettings']['Ports'] is not None and
 		 port in container.attrs['NetworkSettings']['Ports'] and 
 		 container.attrs['NetworkSettings']['Ports'][port] is not None:
